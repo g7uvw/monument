@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/hooke.dir/serialib.cpp.o CMakeFiles/hooke.dir/motor.cpp.o CMakeFiles/hooke.dir/main.cpp.o  -o hooke  -lmenu -lncurses 
