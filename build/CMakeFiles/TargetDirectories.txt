@@ -1,1 +1,0 @@
-/Users/dm/scratch/monument/projects/hooke/build/CMakeFiles/hooke.dir
