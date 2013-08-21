@@ -1,26 +1,24 @@
 #include "hooke.h"
 
 
-char *mainchoices[] = {				//char *choices[] = {
+const char *mainchoices[] = {				//char *choices[] = {
                         "Lock / Free Motor 1",
                         "Lock / Free Motor 2",
                         "Enter Setup Menu",
                         "Enter Jog Menu",
-			"Choice 5",
-			"Choice 6",
-			"Run Motors",
+						"Run Motors",
                         "Exit",
                   };
 		  
 		  
-char *setupchoices[] = {				//char *choices[] = {
+const char *setupchoices[] = {				//char *choices[] = {
                         "Lock / Free Motor 1",
                         "Lock / Free Motor 2",
                         "Set Supply Spool Diameter",
                         "Set Take-up Spool Diameter",
-			"Set Transfer Speed",
-			"Set Transfer Length",
-			"Return to Main Menu",
+						"Set Transfer Speed",
+						"Set Transfer Length",
+						"Return to Main Menu",
                   };
 
 
@@ -29,8 +27,8 @@ int main()
 	/* Initialize curses */	
 	initscr();
 	start_color();
-        cbreak();
-        noecho();
+    cbreak();
+    noecho();
 	keypad(stdscr, TRUE);
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 	init_pair(2, COLOR_GREEN, COLOR_BLACK);
@@ -122,8 +120,7 @@ int setup_menu(Motor* Source, Motor* Sink)
         for(i = 0; i < n_choices; ++i)
                 setup_items[i] = new_item(setupchoices[i],setupchoices[i]);
 	setup_items[n_choices] = (ITEM *)NULL;
-	//item_opts_off(main_items[3], O_SELECTABLE);
-	//item_opts_off(main_items[6], O_SELECTABLE);
+
 
 	/* Create main menu */
 	setup_menu = new_menu((ITEM **)setup_items);
@@ -163,12 +160,6 @@ int setup_menu(Motor* Source, Motor* Sink)
 			case 10: /* Enter */
 			
 				selection = item_index(current_item(setup_menu));    
-			  
-				//move(20, 0);
-				//clrtoeol();
-				//mvprintw(20, 0, "Item selected is : %s", 
-				//		item_name(current_item(main_menu)));
-				//pos_menu_cursor(main_menu);
 				goto outerbreak;
 		}
 	}	
@@ -301,8 +292,6 @@ int realmain(Motor *Source, Motor *Sink)
         for(i = 0; i < n_choices; ++i)
                 main_items[i] = new_item(mainchoices[i],mainchoices[i]);
 	main_items[n_choices] = (ITEM *)NULL;
-	//item_opts_off(main_items[3], O_SELECTABLE);
-	//item_opts_off(main_items[6], O_SELECTABLE);
 
 	/* Create main menu */
 	main_menu = new_menu((ITEM **)main_items);
@@ -341,11 +330,6 @@ int realmain(Motor *Source, Motor *Sink)
 			
 				selection = item_index(current_item(main_menu));    
 			  
-				//move(20, 0);
-				//clrtoeol();
-				//mvprintw(20, 0, "Item selected is : %s", 
-				//		item_name(current_item(main_menu)));
-				//pos_menu_cursor(main_menu);
 				goto outerbreak;
 		}
 	}	
@@ -359,20 +343,20 @@ outerbreak:
 }
 
 
-char *jogchoices[] = {				//char *choices[] = {
-                        "Speed Up Motor 1",
-                        "Slow Down Motor 1",
-                        "Speed Up Motor 2",
-                        "Slow Down Motor 2",
-			"Emergency Stop",
-			"Return to Main Menu",
+const char *jogchoices[] = {				//char *choices[] = {
+                        "Cursor Up = Speed Up Wire Transfer",
+                        "Cursor Down = Slow Down Slowdown Wire Transfer",
+						"SPACE = Emergency Stop",
+						"X = Return to Main Menu",
                   };
 		  
-		  void dojog(Motor *Source, Motor *Sink)
+void dojog(Motor *Source, Motor *Sink)
 {
  int menu_selection = -1;
 
  mainloop:
+ clear();
+ 
   menu_selection = jog_menu(Source,Sink);
   switch (menu_selection)
   {
@@ -449,23 +433,17 @@ int jog_menu(Motor *Source, Motor *Sink)
 	post_menu(jog_menu);
 	refresh();
 
-	while((c = getch()) != KEY_F(4))
+	while((c = getch()) != 88)
 	{       switch(c)
 	        {	case KEY_DOWN:
-				menu_driver(jog_menu, REQ_DOWN_ITEM);
+				selection = 0;
 				break;
 			case KEY_UP:
-				menu_driver(jog_menu, REQ_UP_ITEM);
+				selection = 1;
 				break;
-			case 10: /* Enter */
-			
-				selection = item_index(current_item(jog_menu));    
+			case 32: /* space */
+				selection = 4;    
 			  
-				//move(20, 0);
-				//clrtoeol();
-				//mvprintw(20, 0, "Item selected is : %s", 
-				//		item_name(current_item(main_menu)));
-				//pos_menu_cursor(main_menu);
 				goto outerbreak;
 		}
 	}	
