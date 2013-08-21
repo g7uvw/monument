@@ -353,11 +353,11 @@ void dojog(Motor *Source, Motor *Sink)
   menu_selection = jog_menu(Source,Sink);
   switch (menu_selection)
   {
-    case 0:
+    case KEY_UP:
 	supplyS=Source->GetSpeed()+30;
 	Source->SetSpeed(supplyS);
       break;
-    case 1:
+    case KEY_DOWN:
 	supplyS=Source->GetSpeed()-30;
 	Source->SetSpeed(supplyS);
       break;
@@ -369,7 +369,7 @@ void dojog(Motor *Source, Motor *Sink)
       takeupS = Sink->GetSpeed()-30;
 	Sink->SetSpeed(takeupS);
       break;
-    case 4:
+    case 32:
 	Source->EmergencyStop();
 	Sink->EmergencyStop();
       break;
@@ -454,5 +454,5 @@ outerbreak:
 	//for(i = 0; i < n_choices; ++i)
 	//	free_item(jog_items[i]);
 	//free_menu(jog_menu);
-	return (selection);
+	return (c);
 }
