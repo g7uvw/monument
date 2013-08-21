@@ -86,15 +86,11 @@ int menu_selection = -1;
 	    dojog(Source, Sink);
 	    break;
 	  case 4:
-	    break;
-	  case 5:
-	    break;
-	  case 6:
 		Source->Run(transferLength,supplyA,supplyS);
 		Sink->Run(transferLength,takeupA,takeupS);
 	    dojog(Source, Sink);
 	    break;
-	  case 7:
+	  case 5:
 	    endwin();
 	    exit(0);
 	    break;
