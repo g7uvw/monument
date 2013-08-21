@@ -422,10 +422,10 @@ int jog_menu(Motor *Source, Motor *Sink)
 
 	/* Post the menu */
 	//mvprintw(LINES - 5, 0, "Navigate with Arrow Keys, ENTER selects");
-	mvprintw(LINES - 10, 0, "Cursor Up = Speed Up Wire Transfer");
-	mvprintw(LINES - 9, 0, "Cursor Down = Slow Down Wire Transfer");
-	mvprintw(LINES - 8, 0, "SPACE = Emergency Stop");
-	mvprintw(LINES - 7, 0, "x = exit back to main menu");
+	mvprintw(LINES - 20, 0, "Cursor Up = Speed Up Wire Transfer");
+	mvprintw(LINES - 19, 0, "Cursor Down = Slow Down Wire Transfer");
+	mvprintw(LINES - 18, 0, "SPACE = Emergency Stop");
+	mvprintw(LINES - 17, 0, "x = exit back to main menu");
 	
 	
 	
@@ -440,14 +440,14 @@ int jog_menu(Motor *Source, Motor *Sink)
 	//post_menu(jog_menu);
 	refresh();
 
-	while((c = getch()) != 88)
+	while((c = getch()) != KEY_F(4))
 	{       switch(c)
 	        {	case KEY_DOWN:
 				selection = 0;
-				break;
+				goto outerbreak;
 			case KEY_UP:
 				selection = 1;
-				break;
+				goto outerbreak;
 			case 32: /* space */
 				selection = 4;    
 			  
