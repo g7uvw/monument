@@ -343,13 +343,6 @@ outerbreak:
 }
 
 
-const char *jogchoices[] = {				//char *choices[] = {
-                        "Cursor Up = Speed Up Wire Transfer",
-                        "Cursor Down = Slow Down Slowdown Wire Transfer",
-						"SPACE = Emergency Stop",
-						"X = Return to Main Menu",
-                  };
-		  
 void dojog(Motor *Source, Motor *Sink)
 {
  int menu_selection = -1;
@@ -380,7 +373,7 @@ void dojog(Motor *Source, Motor *Sink)
 	Source->EmergencyStop();
 	Sink->EmergencyStop();
       break;
-    case 5:
+    case KEY_F(4):
       //exit to main menu
       goto loopexit;
       
@@ -390,6 +383,7 @@ void dojog(Motor *Source, Motor *Sink)
 loopexit:
 //do something harmless because we can't have a dangling goto jump where nothing happens.
  clear();
+main_menu(Source, Sink);
 }
 
 int jog_menu(Motor *Source, Motor *Sink)
@@ -425,7 +419,7 @@ int jog_menu(Motor *Source, Motor *Sink)
 	mvprintw(LINES - 20, 0, "Cursor Up = Speed Up Wire Transfer");
 	mvprintw(LINES - 19, 0, "Cursor Down = Slow Down Wire Transfer");
 	mvprintw(LINES - 18, 0, "SPACE = Emergency Stop");
-	mvprintw(LINES - 17, 0, "x = exit back to main menu");
+	mvprintw(LINES - 17, 0, "F4 = exit back to main menu");
 	
 	
 	
