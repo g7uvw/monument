@@ -114,6 +114,30 @@ hooke/fast:
 	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/build
 .PHONY : hooke/fast
 
+jog.o: jog.cpp.o
+.PHONY : jog.o
+
+# target to build an object file
+jog.cpp.o:
+	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/jog.cpp.o
+.PHONY : jog.cpp.o
+
+jog.i: jog.cpp.i
+.PHONY : jog.i
+
+# target to preprocess a source file
+jog.cpp.i:
+	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/jog.cpp.i
+.PHONY : jog.cpp.i
+
+jog.s: jog.cpp.s
+.PHONY : jog.s
+
+# target to generate assembly for a file
+jog.cpp.s:
+	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/jog.cpp.s
+.PHONY : jog.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -186,6 +210,30 @@ serialib.cpp.s:
 	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/serialib.cpp.s
 .PHONY : serialib.cpp.s
 
+setup.o: setup.cpp.o
+.PHONY : setup.o
+
+# target to build an object file
+setup.cpp.o:
+	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/setup.cpp.o
+.PHONY : setup.cpp.o
+
+setup.i: setup.cpp.i
+.PHONY : setup.i
+
+# target to preprocess a source file
+setup.cpp.i:
+	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/setup.cpp.i
+.PHONY : setup.cpp.i
+
+setup.s: setup.cpp.s
+.PHONY : setup.s
+
+# target to generate assembly for a file
+setup.cpp.s:
+	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/setup.cpp.s
+.PHONY : setup.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -195,6 +243,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... hooke"
 	@echo "... rebuild_cache"
+	@echo "... jog.o"
+	@echo "... jog.i"
+	@echo "... jog.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -204,6 +255,9 @@ help:
 	@echo "... serialib.o"
 	@echo "... serialib.i"
 	@echo "... serialib.s"
+	@echo "... setup.o"
+	@echo "... setup.i"
+	@echo "... setup.s"
 .PHONY : help
 
 

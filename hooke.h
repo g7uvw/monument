@@ -1,3 +1,4 @@
+#pragma once
 #ifndef HOOKE_H
 #define HOOKE_H
 //hooke.h
@@ -28,16 +29,16 @@ int jog_menu(Motor *Source, Motor *Sink);
 //void runtime_menu(void);
 
 using namespace std;
-int nRetCode = 0;
-double supplyD = 30.0;
-double takeupD = 50.2;
-double takeupC = 3.1415926535 * takeupD;
-int supplyS = 9000;
-int takeupS = 8000;
-int supplyA = 100;
-int takeupA = 100;
-long int transferLength = 1000; //mm
-char tmp;
-double temp;
+extern int nRetCode = 0;
+extern double supplyD = 30.0;
+extern double takeupD = 50.2;
+extern double takeupC = 3.1415926535 * takeupD;
+extern int supplyS = 9000;
+extern int takeupS = 8000;
+extern int supplyA = 100;
+extern int takeupA = 100;
+extern long int transferLength = 1000; //mm
+extern char tmp;
+extern double temp;
 
 #endif //HOOKE_H

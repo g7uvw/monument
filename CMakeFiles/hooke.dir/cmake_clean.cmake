@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/hooke.dir/serialib.cpp.o"
+  "CMakeFiles/hooke.dir/setup.cpp.o"
+  "CMakeFiles/hooke.dir/jog.cpp.o"
   "CMakeFiles/hooke.dir/motor.cpp.o"
   "CMakeFiles/hooke.dir/main.cpp.o"
   "hooke.pdb"
