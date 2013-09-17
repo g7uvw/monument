@@ -234,6 +234,30 @@ setup.cpp.s:
 	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/setup.cpp.s
 .PHONY : setup.cpp.s
 
+vars.o: vars.cpp.o
+.PHONY : vars.o
+
+# target to build an object file
+vars.cpp.o:
+	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/vars.cpp.o
+.PHONY : vars.cpp.o
+
+vars.i: vars.cpp.i
+.PHONY : vars.i
+
+# target to preprocess a source file
+vars.cpp.i:
+	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/vars.cpp.i
+.PHONY : vars.cpp.i
+
+vars.s: vars.cpp.s
+.PHONY : vars.s
+
+# target to generate assembly for a file
+vars.cpp.s:
+	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/vars.cpp.s
+.PHONY : vars.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,6 +282,9 @@ help:
 	@echo "... setup.o"
 	@echo "... setup.i"
 	@echo "... setup.s"
+	@echo "... vars.o"
+	@echo "... vars.i"
+	@echo "... vars.s"
 .PHONY : help
 
 

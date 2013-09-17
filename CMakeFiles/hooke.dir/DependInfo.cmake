@@ -9,6 +9,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/dm/projects/hooke/motor.cpp" "/home/dm/projects/hooke/CMakeFiles/hooke.dir/motor.cpp.o"
   "/home/dm/projects/hooke/serialib.cpp" "/home/dm/projects/hooke/CMakeFiles/hooke.dir/serialib.cpp.o"
   "/home/dm/projects/hooke/setup.cpp" "/home/dm/projects/hooke/CMakeFiles/hooke.dir/setup.cpp.o"
+  "/home/dm/projects/hooke/vars.cpp" "/home/dm/projects/hooke/CMakeFiles/hooke.dir/vars.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -23,3 +23,8 @@ CMakeFiles/hooke.dir/setup.cpp.o: motor.h
 CMakeFiles/hooke.dir/setup.cpp.o: serialib.h
 CMakeFiles/hooke.dir/setup.cpp.o: setup.cpp
 
+CMakeFiles/hooke.dir/vars.cpp.o: hooke.h
+CMakeFiles/hooke.dir/vars.cpp.o: motor.h
+CMakeFiles/hooke.dir/vars.cpp.o: serialib.h
+CMakeFiles/hooke.dir/vars.cpp.o: vars.cpp
+

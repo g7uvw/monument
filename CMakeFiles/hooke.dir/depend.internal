@@ -23,3 +23,8 @@ CMakeFiles/hooke.dir/setup.cpp.o
  /home/dm/projects/hooke/motor.h
  /home/dm/projects/hooke/serialib.h
  /home/dm/projects/hooke/setup.cpp
+CMakeFiles/hooke.dir/vars.cpp.o
+ /home/dm/projects/hooke/hooke.h
+ /home/dm/projects/hooke/motor.h
+ /home/dm/projects/hooke/serialib.h
+ /home/dm/projects/hooke/vars.cpp

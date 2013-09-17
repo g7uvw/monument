@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = /home/dm/projects/hooke
 CMakeFiles/hooke.dir/all:
 	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/depend
 	$(MAKE) -f CMakeFiles/hooke.dir/build.make CMakeFiles/hooke.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/projects/hooke/CMakeFiles  1 2 3 4 5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/projects/hooke/CMakeFiles  1 2 3 4 5 6
 	@echo "Built target hooke"
 .PHONY : CMakeFiles/hooke.dir/all
 
@@ -72,7 +72,7 @@ all: CMakeFiles/hooke.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hooke.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dm/projects/hooke/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dm/projects/hooke/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/hooke.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dm/projects/hooke/CMakeFiles 0
 .PHONY : CMakeFiles/hooke.dir/rule

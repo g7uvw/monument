@@ -31,7 +31,7 @@ double GettakeupD(void)
 
 double GettakeupC(void)
 {
-	return 3.1415926535 * takeupD
+	return 3.1415926535 * takeupD;
 }
 
 void SetsupplyS(double val)

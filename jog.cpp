@@ -11,20 +11,20 @@ void dojog(Motor *Source, Motor *Sink)
   switch (menu_selection)
   {
     case KEY_UP:
-	supplyS=Source->GetSpeed()+30;
-	Source->SetSpeed(supplyS);
+	SetsupplyS(Source->GetSpeed()+30);
+	Source->SetSpeed(GetsupplyS());
       break;
     case KEY_DOWN:
-	supplyS=Source->GetSpeed()-30;
-	Source->SetSpeed(supplyS);
+	SetsupplyS(Source->GetSpeed()-30);
+	Source->SetSpeed(GetsupplyS());
       break;
     case 2:
-	takeupS = Sink->GetSpeed()+30;
-	Sink->SetSpeed(takeupS);
+	SettakeupS(Sink->GetSpeed()+30);
+	Sink->SetSpeed(GettakeupS());
       break;
     case 3:
-      takeupS = Sink->GetSpeed()-30;
-	Sink->SetSpeed(takeupS);
+      SettakeupS(Sink->GetSpeed()-30);
+	Sink->SetSpeed(GettakeupS());
       break;
     case 32:
 	Source->EmergencyStop();
@@ -87,7 +87,7 @@ int jog_menu(Motor *Source, Motor *Sink)
 	if (Sink->Locked){mvprintw(LINES - 2, 0, "Motor 2 is: Locked");}
 	else
 		mvprintw(LINES - 2, 0, "Motor 2 is: Free");
-	mvprintw(LINES -1,0,"Source speed %d, Takeup speed %d",supplyS,takeupS);
+	mvprintw(LINES -1,0,"Source speed %d, Takeup speed %d",GetsupplyS(),GettakeupS());
 	//post_menu(jog_menu);
 	refresh();
 

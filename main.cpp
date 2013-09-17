@@ -49,8 +49,8 @@ int main()
 	Motor Sink(&port,1,(char)2);
 	Source.Lock();
 	Sink.Lock();
-	Sink.SetSpeed(takeupS);
-	Source.SetSpeed(supplyS);
+	Sink.SetSpeed(GettakeupS());
+	Source.SetSpeed(GetsupplyS());
 	main_menu(&Source, &Sink);
 	
 	
