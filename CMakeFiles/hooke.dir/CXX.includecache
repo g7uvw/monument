@@ -46,7 +46,7 @@ unistd.h
 sys/ioctl.h
 -
 
-/home/dm/projects/hooke/vars.cpp
+/home/dm/projects/hooke/setup.cpp
 hooke.h
 /home/dm/projects/hooke/hooke.h
 

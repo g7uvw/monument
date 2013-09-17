@@ -81,6 +81,8 @@ void dosetup(Motor *Source, Motor *Sink)
 int menu_selection = -1;
 double entry,temp;
 setup_menu_entry:
+clear();
+refresh();
   menu_selection = setup_menu(Source, Sink);
   
   switch (menu_selection)
@@ -137,7 +139,7 @@ setup_menu_entry:
 		refresh();
 		cin >> entry;
 		SettakeupS(entry);
-		printw("%d\n",GettakeupS());
+		printw("%f\n",GettakeupS());
 		refresh();
 		//takeupC = 3.1415926535 * takeupD;
 		temp = (500/GettakeupC())*GettakeupS();
@@ -145,8 +147,8 @@ setup_menu_entry:
 		SetsupplyS(GettakeupS()*(GettakeupD()/GetsupplyD()));
 		Source->SetSpeed(GetsupplyS());
 		Sink->SetSpeed(GettakeupS());
-		printw("Take-up spool speed is now %d \n",GettakeupS());
-		printw("Supply spool speed is now %d \n",GetsupplyS());
+		printw("Take-up spool speed is now %f \n",GettakeupS());
+		printw("Supply spool speed is now %f \n",GetsupplyS());
 		printw("Press Enter to return to main menu.\n");
 		refresh();
 		getch();
@@ -161,7 +163,7 @@ setup_menu_entry:
 		refresh();
 		cin >> entry;
 		SettransferLength(entry*5000);
-		printw("%d\n",GettransferLength()/5000);
+		printw("%f\n",GettransferLength()/5000);
 		refresh();
 		printw("Press Enter to return to main menu.\n");
 		refresh();
