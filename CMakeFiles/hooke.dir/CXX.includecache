@@ -16,6 +16,10 @@ iostream
 motor.h
 /home/dm/projects/hooke/motor.h
 
+/home/dm/projects/hooke/jog.cpp
+hooke.h
+/home/dm/projects/hooke/hooke.h
+
 /home/dm/projects/hooke/motor.h
 serialib.h
 /home/dm/projects/hooke/serialib.h
@@ -45,8 +49,4 @@ unistd.h
 -
 sys/ioctl.h
 -
-
-/home/dm/projects/hooke/setup.cpp
-hooke.h
-/home/dm/projects/hooke/hooke.h
 

@@ -3,7 +3,8 @@
 void dojog(Motor *Source, Motor *Sink)
 {
  int menu_selection = -1;
-
+ int keycounter = 0;
+double speedfraction = (1/1000);
  mainloop:
  clear();
  
@@ -11,11 +12,13 @@ void dojog(Motor *Source, Motor *Sink)
   switch (menu_selection)
   {
     case KEY_UP:
-	SetsupplyS(Source->GetSpeed()+30);
+	keycounter++;
+	SetsupplyS(Source->GetSpeed()+Source->GetSpeed()*speedfraction);
 	Source->SetSpeed(GetsupplyS());
       break;
     case KEY_DOWN:
-	SetsupplyS(Source->GetSpeed()-30);
+	keycounter--;
+	SetsupplyS(Source->GetSpeed()-Source->GetSpeed()*speedfraction);
 	Source->SetSpeed(GetsupplyS());
       break;
     case 2:
