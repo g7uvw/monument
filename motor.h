@@ -11,9 +11,9 @@ class Motor
 		bool SetAcceleration(int Acceleration);
 		bool SetHighResolution();
 		bool EmergencyStop(void);
-		bool SetSpeed(int Speed);
+		bool SetSpeed(double Speed);
 		bool SetDirection(bool Clockwise);
-		int GetSpeed(void);
+		double GetSpeed(void);
 
 	public:
 		int MotorID;

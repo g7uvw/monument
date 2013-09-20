@@ -75,18 +75,22 @@ bool Motor::SetAcceleration(int Acceleration)
 
 
 
-bool Motor::SetSpeed(int Speed)
+bool Motor::SetSpeed(double Speed)
 	{
+	//speed passed here is in revs/sec
+	//and use equation from datasheet.
+	double st = Speed*50000/10;
+	speed = (int) st;
 	stringstream cmd;
-	cmd << "S="<<Speed<<"." << MotorID << "\x0D\x0A";
+	cmd << "S="<<speed<<"." << MotorID << "\x0D\x0A";
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
-	speed = Speed;
 	return false;
 	}
 	
-int Motor::GetSpeed(void)
+double Motor::GetSpeed(void)
 	{
-		return speed;
+		//returns revs /sec
+		return (double) speed * 10/50000;
 	}
 
 

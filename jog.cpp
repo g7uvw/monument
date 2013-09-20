@@ -4,7 +4,7 @@ void dojog(Motor *Source, Motor *Sink)
 {
  int menu_selection = -1;
  int keycounter = 0;
-double speedfraction = (1/1000);
+double speedfraction = (1.0/1000.0);
  mainloop:
  clear();
  
@@ -90,7 +90,7 @@ int jog_menu(Motor *Source, Motor *Sink)
 	if (Sink->Locked){mvprintw(LINES - 2, 0, "Motor 2 is: Locked");}
 	else
 		mvprintw(LINES - 2, 0, "Motor 2 is: Free");
-	mvprintw(LINES -1,0,"Source speed %d, Takeup speed %d",GetsupplyS(),GettakeupS());
+	mvprintw(LINES -1,0,"Source speed %f, Takeup speed %f",GetsupplyS(),GettakeupS());
 	//post_menu(jog_menu);
 	refresh();
 
