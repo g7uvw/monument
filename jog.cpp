@@ -5,6 +5,8 @@ void dojog(Motor *Source, Motor *Sink)
  int menu_selection = -1;
  int keycounter = 0;
 double speedfraction = (1.0/1000.0);
+double test1,test2;	
+
  mainloop:
  clear();
  
@@ -13,12 +15,18 @@ double speedfraction = (1.0/1000.0);
   {
     case KEY_UP:
 	keycounter++;
-	SetsupplyS(Source->GetSpeed()+Source->GetSpeed()*speedfraction);
+	test1 = Source->GetSpeed();
+	test2 = Source->GetSpeed()*speedfraction;
+	SetsupplyS(test2+test1);
+	//SetsupplyS(Source->GetSpeed()+Source->GetSpeed()*speedfraction);
 	Source->SetSpeed(GetsupplyS());
       break;
     case KEY_DOWN:
 	keycounter--;
-	SetsupplyS(Source->GetSpeed()-Source->GetSpeed()*speedfraction);
+	test1 = Source->GetSpeed();
+	test2 = Source->GetSpeed()*speedfraction;
+	SetsupplyS(test1-test2);
+	//SetsupplyS(Source->GetSpeed()-Source->GetSpeed()*speedfraction);
 	Source->SetSpeed(GetsupplyS());
       break;
     case 2:

@@ -20,18 +20,6 @@ motor.h
 hooke.h
 /home/dm/projects/hooke/hooke.h
 
-/home/dm/projects/hooke/main.cpp
-hooke.h
-/home/dm/projects/hooke/hooke.h
-
-/home/dm/projects/hooke/motor.cpp
-motor.h
-/home/dm/projects/hooke/motor.h
-sstream
--
-string.h
--
-
 /home/dm/projects/hooke/motor.h
 serialib.h
 /home/dm/projects/hooke/serialib.h
@@ -61,12 +49,4 @@ unistd.h
 -
 sys/ioctl.h
 -
-
-/home/dm/projects/hooke/setup.cpp
-hooke.h
-/home/dm/projects/hooke/hooke.h
-
-/home/dm/projects/hooke/vars.cpp
-hooke.h
-/home/dm/projects/hooke/hooke.h
 
