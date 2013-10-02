@@ -2,7 +2,9 @@
 #include <sstream>
 #include <string.h>
 
+
 using namespace std;
+//ofstream logfile;
 
 Motor::Motor(serialib *port, int portnum, char ID)
 //Motor::Motor(int portnum, char ID)
@@ -10,6 +12,9 @@ Motor::Motor(serialib *port, int portnum, char ID)
 	, m_portnum(portnum)
 	, MotorID(ID)
 	{
+	logfile.open("log.txt",ios::out|ios::app);
+	logfile <<"wibble"<<endl;
+	
 	char sRxBuf[300]={};
 	stringstream cmd;
 	cmd << "K37." << MotorID << "\x0D\x0A";
@@ -54,6 +59,7 @@ Motor::Motor(serialib *port, int portnum, char ID)
 
 Motor::~Motor(void)
 	{
+		logfile.close();
 	}
 
 bool Motor::SetHighResolution()
@@ -83,6 +89,8 @@ bool Motor::SetSpeed(double Speed)
 	speed = (int) st;
 	stringstream cmd;
 	cmd << "S="<<speed<<"." << MotorID << "\x0D\x0A";
+	logfile << cmd.str() <<endl;
+	//logfile <<"setting speed" <<endl;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 	return false;
 	}

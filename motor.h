@@ -1,6 +1,8 @@
 #pragma once
 #include "serialib.h"
 #include <string>
+#include <iostream>
+#include  <fstream>
 
 class Motor
 	{
@@ -32,6 +34,7 @@ class Motor
 
 		void Demo(void);
 		void Run(long int length, int acceleration, int speed);
+		std::ofstream logfile;
 		
 	};
 
