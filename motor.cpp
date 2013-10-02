@@ -1,6 +1,7 @@
 #include "motor.h"
 #include <sstream>
 #include <string.h>
+#include <cmath>
 
 
 using namespace std;
@@ -85,8 +86,8 @@ bool Motor::SetSpeed(double Speed)
 	{
 	//speed passed here is in revs/sec
 	//and use equation from datasheet.
-	double st = Speed*50000/10;
-	speed = (int) st;
+	//double st = Speed*50000/10;
+	speed = (int) round (Speed);
 	stringstream cmd;
 	cmd << "S="<<speed<<"." << MotorID << "\x0D\x0A";
 	logfile << cmd.str() <<endl;
@@ -98,7 +99,7 @@ bool Motor::SetSpeed(double Speed)
 double Motor::GetSpeed(void)
 	{
 		//returns revs /sec
-		return (double) speed * 10/50000;
+		return (double) speed;
 	}
 
 

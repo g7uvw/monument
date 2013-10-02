@@ -3,8 +3,8 @@
 double supplyD = 30.0;
  double takeupD = 50.2;
  double takeupC;// = 3.1415926535 * takeupD;
- double supplyS = 9000;
- double takeupS = 8000;
+ double supplyS = 833;
+ double takeupS = 500;
  int supplyA = 100;
  int takeupA = 100;
  double transferLength = 1000; //mm
