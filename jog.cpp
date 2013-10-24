@@ -17,7 +17,7 @@ double test1,test2;
 	keycounter++;
 	test1 = Source->GetSpeed();
 	test2 = Source->GetSpeed()*speedfraction;
-	SetsupplyS(test2+test1);
+	SetsupplyS(test1+test2);
 	//SetsupplyS(Source->GetSpeed()+Source->GetSpeed()*speedfraction);
 	Source->SetSpeed(GetsupplyS());
       break;
