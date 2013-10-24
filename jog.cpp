@@ -98,7 +98,7 @@ int jog_menu(Motor *Source, Motor *Sink)
 	if (Sink->Locked){mvprintw(LINES - 2, 0, "Motor 2 is: Locked");}
 	else
 		mvprintw(LINES - 2, 0, "Motor 2 is: Free");
-	mvprintw(LINES -1,0,"Source speed %f, Takeup speed %f",GetsupplyS(),GettakeupS());
+	mvprintw(LINES -1,0,"Source speed %f, Takeup speed %f",GetsupplyS()/100.0,GettakeupS()/100.0);
 	//post_menu(jog_menu);
 	refresh();
 

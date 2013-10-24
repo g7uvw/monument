@@ -16,7 +16,7 @@ iostream
 motor.h
 /home/dm/projects/hooke/motor.h
 
-/home/dm/projects/hooke/main.cpp
+/home/dm/projects/hooke/jog.cpp
 hooke.h
 /home/dm/projects/hooke/hooke.h
 
