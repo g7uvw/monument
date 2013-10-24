@@ -187,7 +187,7 @@ void Motor::Run(long int length, int acceleration, int speed)
 	{
 	stringstream cmd;
 	cmd.str("");
-	length *= 2;	//double  the length 
+	length *= 1000;	//double  the length 
 	speed *=100;	//speed is passed in mm/s
 	//stop the motor
 	/*cmd << "]." << MotorID << "\x0D\x0A";

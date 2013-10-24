@@ -46,7 +46,7 @@ const char *setupchoices[] = {
 	if (Sink->Locked){mvprintw(LINES - 2, 0, "Motor 2 is: Locked");}
 	else
 		mvprintw(LINES - 2, 0, "Motor 2 is: Free");
-	mvprintw(LINES -1,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS()/100.0);
+	mvprintw(LINES -1,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS());
 
 
 
@@ -138,9 +138,9 @@ refresh();
 		printw("Enter transfer speed in mm/s:");
 		refresh();
 		cin >> temp;
-		entry = ((((temp/GettakeupD())*60.0)/60.0)*50000)/10;
+		entry = ((((temp/GettakeupD())*60.0)/60.0)*50000)/1000;
 		SettakeupS(entry);
-		printw("%f\n",GettakeupS()/100.0);
+		printw("%f\n",GettakeupS());
 		refresh();
 		//takeupC = 3.1415926535 * takeupD;
 		//temp = (500/GettakeupC())*GettakeupS();
@@ -148,8 +148,8 @@ refresh();
 		SetsupplyS(GettakeupS()*(GettakeupD()/GetsupplyD()));
 		Source->SetSpeed(GetsupplyS());
 		Sink->SetSpeed(GettakeupS());
-		printw("Take-up spool speed is now %f \n",GettakeupS()/100.0);
-		printw("Supply spool speed is now %f \n",GetsupplyS()/100.0);
+		printw("Take-up spool speed is now %f \n",GettakeupS());
+		printw("Supply spool speed is now %f \n",GetsupplyS());
 		printw("Press Enter to return to main menu.\n");
 		refresh();
 		getch();
@@ -163,8 +163,8 @@ refresh();
 		printw("Enter length of wire to transfer in mm:");
 		refresh();
 		cin >> entry;
-		SettransferLength(entry*500);
-		printw("%f\n",GettransferLength()/500);
+		SettransferLength(entry);
+		printw("%f\n",GettransferLength());
 		refresh();
 		printw("Press Enter to return to main menu.\n");
 		refresh();
