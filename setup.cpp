@@ -46,7 +46,7 @@ const char *setupchoices[] = {
 	if (Sink->Locked){mvprintw(LINES - 2, 0, "Motor 2 is: Locked");}
 	else
 		mvprintw(LINES - 2, 0, "Motor 2 is: Free");
-	mvprintw(LINES -1,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS()/10.0);
+	mvprintw(LINES -1,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS()/100.0);
 
 
 
@@ -140,7 +140,7 @@ refresh();
 		cin >> temp;
 		entry = ((((temp/GettakeupD())*60.0)/60.0)*50000)/10;
 		SettakeupS(entry);
-		printw("%f\n",GettakeupS());
+		printw("%f\n",GettakeupS()/100.0);
 		refresh();
 		//takeupC = 3.1415926535 * takeupD;
 		//temp = (500/GettakeupC())*GettakeupS();
@@ -148,8 +148,8 @@ refresh();
 		SetsupplyS(GettakeupS()*(GettakeupD()/GetsupplyD()));
 		Source->SetSpeed(GetsupplyS());
 		Sink->SetSpeed(GettakeupS());
-		printw("Take-up spool speed is now %f \n",GettakeupS());
-		printw("Supply spool speed is now %f \n",GetsupplyS());
+		printw("Take-up spool speed is now %f \n",GettakeupS()/100.0);
+		printw("Supply spool speed is now %f \n",GetsupplyS()/100.0);
 		printw("Press Enter to return to main menu.\n");
 		refresh();
 		getch();
