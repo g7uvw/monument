@@ -87,6 +87,7 @@ bool Motor::SetSpeed(double Speed)
 	//speed passed here is in revs/sec
 	//and use equation from datasheet.
 	//double st = Speed*50000/10;
+	Speed *= 100;		//speed is passed in mm/s
 	speed = (int) round (Speed);
 	stringstream cmd;
 	cmd << "S="<<speed<<"." << MotorID << "\x0D\x0A";
@@ -186,6 +187,8 @@ void Motor::Run(long int length, int acceleration, int speed)
 	{
 	stringstream cmd;
 	cmd.str("");
+	length *= 2;	//double  the length 
+	speed *=100;	//speed is passed in mm/s
 	//stop the motor
 	/*cmd << "]." << MotorID << "\x0D\x0A";
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());*/
