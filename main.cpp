@@ -87,7 +87,7 @@ int menu_selection = -1;
 		Source->Lock();
 		Sink->Lock();
 		Source->Run(GettransferLength()/GetsupplyC(),GetsupplyA(),GetsupplyS());
-		Sink->Run(GettransferLength()GettakeupC(),GettakeupA(),GettakeupS());
+		Sink->Run(GettransferLength()/GettakeupC(),GettakeupA(),GettakeupS());
 	    dojog(Source, Sink);
 	    break;
 	  case 5:
