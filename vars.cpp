@@ -1,10 +1,10 @@
 #include "hooke.h"
 
-double supplyD = 30.0;
- double takeupD = 50.2;
+double supplyD = 31.7;
+ double takeupD = 50.0;
  double takeupC;// = 3.1415926535 * takeupD;
- double supplyS = 833;
- double takeupS = 500;
+ double supplyS = 83;
+ double takeupS = 50;
  int supplyA = 100;
  int takeupA = 100;
  double transferLength = 1000; //mm
