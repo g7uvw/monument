@@ -23,24 +23,13 @@ Motor::Motor(serialib *port, int portnum, char ID)
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 	m_pPort->Read(sRxBuf,20,200);
 
-	//init1 = sRxBuf;
-	/*m_pPort->Read(sRxBuf,20);
-	init1 += sRxBuf;
-	m_pPort->Read(sRxBuf,20);
-	init1 += sRxBuf;*/
-	
-	
+
 	//cmd.clear();
 	cmd.str("");
 	cmd << "K14." << MotorID << "\x0D\x0A";
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 	m_pPort->Read(sRxBuf,200,2000);
 
-	//init2 = sRxBuf;
-	/*m_pPort->Read(sRxBuf,20);
-	init2 += sRxBuf;
-	m_pPort->Read(sRxBuf,20);
-	init2 += sRxBuf;*/
 
 	//dump motor params for debugging.
 	cmd.str("");
@@ -48,14 +37,7 @@ Motor::Motor(serialib *port, int portnum, char ID)
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 	m_pPort->Read(sRxBuf,200,2000);
 	init3 = sRxBuf;
-	/*m_pPort->Read(sRxBuf,20);
-	init3 += sRxBuf;
-	m_pPort->Read(sRxBuf,20);
-	init3 += sRxBuf;
-	m_pPort->Read(sRxBuf,20);
-	init3 += sRxBuf;
-	m_pPort->Read(sRxBuf,20);*/
-
+	
 	}
 
 
@@ -188,8 +170,8 @@ void Motor::Run(long int length, int acceleration, int speed)
 	{
 	stringstream cmd;
 	cmd.str("");
-	length *= 1000;	//double  the length 
-	speed *=100;	//speed is passed in mm/s
+	length *= 1000;	
+	speed *=100;	
 	//stop the motor
 	/*cmd << "]." << MotorID << CRLF;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());*/
