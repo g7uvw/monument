@@ -5,9 +5,10 @@ const char *setupchoices[] = {
                         "Lock / Free Motor 2",
                         "Set Supply Spool Diameter",
                         "Set Take-up Spool Diameter",
-						"Set Transfer Speed",
-						"Set Transfer Length",
-						"Return to Main Menu",
+			"Set Transfer Speed",
+			"Set Transfer Length",
+			"Set Accelerations",
+			"Return to Main Menu",
                   };
 		  
 		  int setup_menu(Motor* Source, Motor* Sink)
@@ -172,6 +173,23 @@ refresh();
 	    goto setup_menu_entry;
 	  
 	 case 6:
+		clear();
+		refresh();
+		printw(". Set Accelerations\n");
+		printw("WARNING : Correct spool diamters must be set first, else the acceleration ratios WILL BE WRONG!\n");
+		printw("Current accelerations are, Supply:%d units and Takeup: %d units\n",GetsupplyA(),GettakeupA());
+		printw("Enter new supply acceleration, takeup will be set and scaled automatically\n");
+		refresh();
+		cin >>entry;
+		SetsupplyA(entry);
+		SettakeupA(entry * GettakeupD()/GetsupplyD());	//scale to ratio of Ds - bigger one acclerates faster.
+		printw("New accelerations are, Supply:%d units and Takeup: %d units\n", GetsupplyA(), GettakeupA());
+		refresh();
+		printw("Press Enter to return to main menu.\n");
+		refresh();
+		getch();
+	    goto setup_menu_entry;
+	 case 7:
 	    break;
 	    
 	}

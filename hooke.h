@@ -40,6 +40,8 @@ void SettakeupS(double val);
 double GettakeupS(void);
 int GettakeupA(void);
 int GetsupplyA(void);
+void SettakeupA(int A);
+void SetsupplyA(int A);
 void SettransferLength(double val);
 double GettransferLength(void);
 

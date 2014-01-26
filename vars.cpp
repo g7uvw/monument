@@ -70,6 +70,17 @@ int GetsupplyA(void)
 	return takeupA;
 }
 
+void SettakeupA(int A)
+{
+	takeupA = A;
+}
+
+void SetsupplyA(int A)
+{
+	supplyA = A;
+}
+
+
 void SettransferLength(double val)
 {
 	transferLength = val;
