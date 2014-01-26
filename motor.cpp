@@ -171,7 +171,7 @@ void Motor::Run(long int length, int acceleration, int speed)
 	stringstream cmd;
 	cmd.str("");
 	length *= 1000;	
-	speed *=100;	
+	speed *=10;	
 	//stop the motor
 	/*cmd << "]." << MotorID << CRLF;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());*/

@@ -8,6 +8,7 @@ double supplyD = 31.7;
  int supplyA = 100;
  int takeupA = 100;
  double transferLength = 1000; //mm
+ int pulsesperrevolution = 50000;	//checkthis 
  
 void SetsupplyD (double val)
 {
@@ -32,6 +33,11 @@ double GettakeupD(void)
 double GettakeupC(void)
 {
 	return 3.1415926535 * takeupD;
+}
+
+double GetsupplyC(void)
+{
+	return 3.1415926535 * supplyD;
 }
 
 void SetsupplyS(double val)

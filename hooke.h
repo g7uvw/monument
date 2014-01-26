@@ -33,6 +33,7 @@ double GetsupplyD(void);
 void SettakeupD (double val);
 double GettakeupD(void);
 double GettakeupC(void);
+double GetsupplyC(void);
 void SetsupplyS(double val);
 double GetsupplyS(void);
 void SettakeupS(double val);
