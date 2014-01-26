@@ -10,7 +10,7 @@ const char *mainchoices[] = {
                         "Lock / Free Motor 2",
                         "Enter Setup Menu",
                         "Enter Jog Menu",
-						"Run Motors",
+			"Run Motors",
                         "Exit",
                   };
 		  
@@ -86,8 +86,8 @@ int menu_selection = -1;
 	  case 4:
 		Source->Lock();
 		Sink->Lock();
-		Source->Run(GettransferLength()/GetsupplyC(),GetsupplyA(),GetsupplyS());
-		Sink->Run(GettransferLength()/GettakeupC(),GettakeupA(),GettakeupS());
+		Source->Run(GettransferLength()/GetsupplyC(),GetsupplyA(),GetsupplyS(),GetDirection());
+		Sink->Run(GettransferLength()/GettakeupC(),GettakeupA(),GettakeupS(),GetDirection());
 	    dojog(Source, Sink);
 	    break;
 	  case 5:
@@ -143,16 +143,19 @@ int realmain(Motor *Source, Motor *Sink)
 	set_menu_grey(main_menu, COLOR_PAIR(3));
 
 	/* Post the menu */
-	mvprintw(LINES - 5, 0, "Navigate with Arrow Keys, ENTER selects");
+	mvprintw(LINES - 6, 0, "Navigate with Arrow Keys, ENTER selects");
 	if (Source->Locked){mvprintw(LINES - 3, 0, "Motor 1 is: Locked");}
 	else
-		mvprintw(LINES - 3, 0, "Motor 1 is: Free");
+		mvprintw(LINES - 4, 0, "Motor 1 is: Free");
 	
 	if (Sink->Locked){mvprintw(LINES - 2, 0, "Motor 2 is: Locked");}
 	else
-		mvprintw(LINES - 2, 0, "Motor 2 is: Free");
-	mvprintw(LINES -1,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS());
-
+		mvprintw(LINES - 3, 0, "Motor 2 is: Free");
+	mvprintw(LINES -2,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS());
+	if (GetDirection() <0)
+		mvprintw(LINES -1,0,"Direction is Supply spool to Takeup spool\n");
+	else
+		mvprintw(LINES -1,0,"Direction is Takeup spool to Supply spool\n");
 	
 	post_menu(main_menu);
 	refresh();

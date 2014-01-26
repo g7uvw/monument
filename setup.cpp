@@ -39,17 +39,19 @@ const char *setupchoices[] = {
 	set_menu_grey(setup_menu, COLOR_PAIR(3));
 
 	/* Post the menu */
-	mvprintw(LINES - 5, 0, "Navigate with Arrow Keys, ENTER selects");
+	mvprintw(LINES - 6, 0, "Navigate with Arrow Keys, ENTER selects");
 	if (Source->Locked){mvprintw(LINES - 3, 0, "Motor 1 is: Locked");}
 	else
-		mvprintw(LINES - 3, 0, "Motor 1 is: Free");
+		mvprintw(LINES - 4, 0, "Motor 1 is: Free");
 	
-	if (Sink->Locked){mvprintw(LINES - 2, 0, "Motor 2 is: Locked");}
+	if (Sink->Locked){mvprintw(LINES - 3, 0, "Motor 2 is: Locked");}
 	else
-		mvprintw(LINES - 2, 0, "Motor 2 is: Free");
-	mvprintw(LINES -1,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS());
-
-
+		mvprintw(LINES - 3, 0, "Motor 2 is: Free");
+	mvprintw(LINES -2,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS());
+	if (GetDirection() <0)
+		mvprintw(LINES -1,0,"Direction is Supply spool to Takeup spool\n");
+	else
+		mvprintw(LINES -1,0,"Direction is Takeup spool to Supply spool\n");
 
 	post_menu(setup_menu);
 	refresh();
@@ -161,10 +163,16 @@ refresh();
 		refresh();
 		printw(". Wire Length\n");
 		printw("WARNING : Correct spool diamters must be set first, else this speed WILL BE WRONG!\n");
+		printw("Negative length will change transfer direction\n");	
 		printw("Enter length of wire to transfer in mm:");
 		refresh();
 		cin >> entry;
-		SettransferLength(entry);
+		if (entry < 0)
+			SetDirection(1);	//yes, I know this looks wrong, but it isn't
+		else
+			SetDirection(-1);	//same for this, it really is -ve for a +direction the wave we have the hardware setup
+		
+		SettransferLength(abs(entry));
 		printw("%f\n",GettransferLength());
 		refresh();
 		printw("Press Enter to return to main menu.\n");
@@ -189,7 +197,9 @@ refresh();
 		refresh();
 		getch();
 	    goto setup_menu_entry;
-	 case 7:
+
+	
+	case 7:
 	    break;
 	    
 	}

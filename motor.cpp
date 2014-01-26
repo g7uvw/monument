@@ -166,7 +166,7 @@ void Motor::Demo(void)
 	}
 
 
-void Motor::Run(long int length, int acceleration, int speed)
+void Motor::Run(long int length, int acceleration, int speed, int direction)
 	{
 	stringstream cmd;
 	cmd.str("");
@@ -188,7 +188,7 @@ void Motor::Run(long int length, int acceleration, int speed)
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 
 	//set target position
-	cmd << "P=" << -1*length << "." <<MotorID << CRLF;
+	cmd << "P=" << direction*length << "." <<MotorID << CRLF;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 
 	//go

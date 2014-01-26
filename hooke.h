@@ -44,6 +44,8 @@ void SettakeupA(int A);
 void SetsupplyA(int A);
 void SettransferLength(double val);
 double GettransferLength(void);
+int GetDirection(void);
+void SetDirection(int d);
 
 using namespace std;
 //extern int nRetCode = 0;

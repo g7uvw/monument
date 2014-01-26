@@ -10,6 +10,18 @@ double supplyD = 31.7;
  double transferLength = 1000; //mm
  int pulsesperrevolution = 50000;	//checkthis 
  
+ int direction = -1;
+ 
+ void SetDirection(int d)
+ {
+	direction = d;
+ }
+ 
+ int GetDirection(void)
+ {
+	 return direction;
+ }
+ 
 void SetsupplyD (double val)
 {
 	supplyD = val;	
@@ -67,7 +79,7 @@ int GettakeupA(void)
 
 int GetsupplyA(void)
 {
-	return takeupA;
+	return supplyA;
 }
 
 void SettakeupA(int A)

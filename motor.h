@@ -33,7 +33,7 @@ class Motor
 		int speed;
 
 		void Demo(void);
-		void Run(long int length, int acceleration, int speed);
+		void Run(long int length, int acceleration, int speed, int direction);
 		std::ofstream logfile;
 		
 	};
