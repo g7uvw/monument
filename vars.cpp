@@ -8,9 +8,16 @@ double supplyD = 31.7;
  int supplyA = 100;
  int takeupA = 100;
  double transferLength = 1000; //mm
- int pulsesperrevolution = 50000;	//checkthis 
+ int pulsesperrevolution = 50000;	//valid when in 1:1 resolution mode with encoder
+ int speedunit = 1;
+ 
  
  int direction = -1;
+ 
+ int GetSpeedUnit(void)
+ {
+ 	return speedunit;	
+ }
  
  void SetDirection(int d)
  {
