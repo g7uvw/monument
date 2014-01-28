@@ -48,9 +48,10 @@ Motor::~Motor(void)
 
 bool Motor::SetHighResolution()
 	{
-	//set 50,000 counts and 10pps resolution
+	
 	stringstream cmd;
-	cmd << "K37=30." << MotorID << CRLF;
+	//cmd << "K37=30." << MotorID << CRLF; //set 50,000 counts and 10pps resolution
+	cmd << "K37=100." << MotorID << CRLF; //Set 1:1 resolution with encoder
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 	return false;
 	}
@@ -86,15 +87,6 @@ double Motor::GetSpeed(void)
 		return (double) speed;
 	}
 
-
-bool Motor::SetDirection(bool Clockwise)
-	{
-	unsigned long len;
-	m_pPort->WriteString("GPS123");
-	//CSerialPort::Write("GPS123",6);
-	//sp.WritePort("GPS123",100,len);
-	return false;
-	}
 
 bool Motor::EmergencyStop(void)
 	{
@@ -168,9 +160,10 @@ void Motor::Demo(void)
 
 void Motor::Run(long int length, int acceleration, int speed, int direction)
 	{
+	//length is in pulse counts. In 1:1 enocder mode, 50k pulses is one revolution.
+		
 	stringstream cmd;
 	cmd.str("");
-	length *= 1000;	
 	speed *=10;	
 	//stop the motor
 	/*cmd << "]." << MotorID << CRLF;

@@ -102,3 +102,8 @@ double GettransferLength(void)
 {
 	return transferLength;
 }
+
+int GetPPR(void)
+{
+	return pulsesperrevolution;
+}

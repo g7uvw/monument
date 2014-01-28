@@ -46,6 +46,7 @@ void SettransferLength(double val);
 double GettransferLength(void);
 int GetDirection(void);
 void SetDirection(int d);
+int GetPPR(void);
 
 using namespace std;
 //extern int nRetCode = 0;
