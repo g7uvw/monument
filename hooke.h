@@ -47,6 +47,7 @@ double GettransferLength(void);
 int GetDirection(void);
 void SetDirection(int d);
 int GetPPR(void);
+int GetSpeedUnit(void);
 
 using namespace std;
 //extern int nRetCode = 0;

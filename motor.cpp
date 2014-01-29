@@ -68,10 +68,8 @@ bool Motor::SetAcceleration(int Acceleration)
 
 bool Motor::SetSpeed(double Speed)
 	{
-	//speed passed here is in revs/sec
-	//and use equation from datasheet.
-	//double st = Speed*50000/10;
-	Speed *= 100;		//speed is passed in mm/s
+	//Speed vale here is in pulses
+	//in 1:1 encoder mode, there are 50,000 pulses for one rev/sec
 	speed = (int) round (Speed);
 	stringstream cmd;
 	cmd << "S="<<speed<<"." << MotorID << CRLF;
@@ -160,7 +158,7 @@ void Motor::Demo(void)
 
 void Motor::Run(long int length, int acceleration, int speed, int direction)
 	{
-	//length is in pulse counts. In 1:1 enocder mode, 50k pulses is one revolution.
+	//length is in pulse counts. In 1:1 encoder mode, 50k pulses is one revolution.
 		
 	stringstream cmd;
 	cmd.str("");
@@ -172,20 +170,25 @@ void Motor::Run(long int length, int acceleration, int speed, int direction)
 	//tell the motor the current position is 0
 	//all moves are relative from here
 	cmd << "|2." << MotorID << CRLF;
+	logfile << cmd.str() <<endl;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 
 	//set speed and acceleration
 	cmd << "A=" << acceleration << "." << MotorID << CRLF;
+	logfile << cmd.str() <<endl;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 	cmd << "S=" << speed << "." << MotorID << CRLF;
+	logfile << cmd.str() <<endl;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 
 	//set target position
 	cmd << "P=" << direction*length << "." <<MotorID << CRLF;
+	logfile << cmd.str() <<endl;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 
 	//go
 	cmd << "^." << MotorID << CRLF;
+	logfile << cmd.str() <<endl;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 	}
 
