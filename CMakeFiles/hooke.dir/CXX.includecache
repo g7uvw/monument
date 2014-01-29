@@ -6,15 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/dm/projects/hooke/motor.cpp
+/home/dm/projects/hooke/hooke.h
+menu.h
+-
+stdlib.h
+-
+iostream
+-
 motor.h
 /home/dm/projects/hooke/motor.h
-sstream
--
-string.h
--
-cmath
--
+
+/home/dm/projects/hooke/main.cpp
+hooke.h
+/home/dm/projects/hooke/hooke.h
 
 /home/dm/projects/hooke/motor.h
 serialib.h

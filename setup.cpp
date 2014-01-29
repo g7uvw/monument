@@ -145,7 +145,7 @@ refresh();
 		SetsupplyS(entry);
 		printw("%f\n",GetsupplyS());
 		refresh();
-		SettakeupS(GetsupplyS()*(GettakeupD()/GetsupplyD()));
+		SettakeupS(GetsupplyS()*(GetsupplyD()/GettakeupD()));
 		Source->SetSpeed(GetsupplyS());
 		Sink->SetSpeed(GettakeupS());
 		printw("Take-up spool speed is now %f \n",GettakeupS());
