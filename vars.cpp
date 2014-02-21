@@ -114,3 +114,13 @@ int GetPPR(void)
 {
 	return pulsesperrevolution;
 }
+
+double GettakeupSmms(void)
+{
+return  GettakeupC() * GettakeupS()/(GetPPR()*GetSpeedUnit());
+}
+
+double GetsupplySmms(void)
+{
+	return GetsupplyC() * GetsupplyS()/(GetPPR()*GetSpeedUnit());
+}

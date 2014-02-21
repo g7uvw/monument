@@ -36,8 +36,12 @@ double GettakeupC(void);
 double GetsupplyC(void);
 void SetsupplyS(double val);
 double GetsupplyS(void);
+double GetsupplySmms(void);
+
 void SettakeupS(double val);
 double GettakeupS(void);
+double GettakeupSmms(void);
+
 int GettakeupA(void);
 int GetsupplyA(void);
 void SettakeupA(int A);
@@ -48,6 +52,7 @@ int GetDirection(void);
 void SetDirection(int d);
 int GetPPR(void);
 int GetSpeedUnit(void);
+
 
 using namespace std;
 //extern int nRetCode = 0;

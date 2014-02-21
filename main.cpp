@@ -151,7 +151,7 @@ int realmain(Motor *Source, Motor *Sink)
 	if (Sink->Locked){mvprintw(LINES - 2, 0, "Motor 2 is: Locked");}
 	else
 		mvprintw(LINES - 3, 0, "Motor 2 is: Free");
-	mvprintw(LINES -2,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS());
+	mvprintw(LINES -2,0,"Source Diameter %.3f mm, Takeup Diameter %.3f mm, Speed %.3f mm/s",GetsupplyD(),GettakeupD(),GettakeupS());
 	if (GetDirection() <0)
 		mvprintw(LINES -1,0,"Direction is Supply spool to Takeup spool\n");
 	else

@@ -15,17 +15,17 @@ double test1,test2;
   {
     case KEY_UP:
 	keycounter++;
-	test1 = Source->GetSpeed();
-	test2 = Source->GetSpeed()*speedfraction;
-	SetsupplyS(test1+test2);
+	test1 = Source->GetSpeed();///10.0;
+	test2 = test1*speedfraction;
+	SetsupplyS((test1+test2));
 	//SetsupplyS(Source->GetSpeed()+Source->GetSpeed()*speedfraction);
 	Source->SetSpeed(GetsupplyS());
       break;
     case KEY_DOWN:
 	keycounter--;
-	test1 = Source->GetSpeed();
-	test2 = Source->GetSpeed()*speedfraction;
-	SetsupplyS(test1-test2);
+	test1 = Source->GetSpeed();///10.0;
+	test2 = test1*speedfraction;
+	SetsupplyS((test1-test2));
 	//SetsupplyS(Source->GetSpeed()-Source->GetSpeed()*speedfraction);
 	Source->SetSpeed(GetsupplyS());
       break;
@@ -98,7 +98,7 @@ int jog_menu(Motor *Source, Motor *Sink)
 	if (Sink->Locked){mvprintw(LINES - 2, 0, "Motor 2 is: Locked");}
 	else
 		mvprintw(LINES - 2, 0, "Motor 2 is: Free");
-	mvprintw(LINES -1,0,"Source speed %f, Takeup speed %f",GetsupplyS(),GettakeupS());
+	mvprintw(LINES -1,0,"Source speed %.3f, Takeup speed %.3f",GetsupplySmms(),GettakeupSmms());
 	//post_menu(jog_menu);
 	refresh();
 

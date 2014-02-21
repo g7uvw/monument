@@ -72,7 +72,7 @@ bool Motor::SetSpeed(double Speed)
 	//in 1:1 encoder mode, there are 50,000 pulses for one rev/sec
 	speed = (int) round (Speed);
 	stringstream cmd;
-	cmd << "S="<<speed<<"." << MotorID << CRLF;
+	cmd << "S="<<speed/10<<"." << MotorID << CRLF;
 	logfile << cmd.str() <<endl;
 	//logfile <<"setting speed" <<endl;
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
@@ -162,34 +162,33 @@ void Motor::Run(long int length, int acceleration, int speed, int direction)
 		
 	stringstream cmd;
 	cmd.str("");
-	//speed *=10;	
+	double runspeed = speed / 10.0;
+	//speed /=10;	//fix speed issue. Even with correct settinsg we're still 10x too fast.
+	
 	//stop the motor
-	/*cmd << "]." << MotorID << CRLF;
-	m_pPort->Write(cmd.str().c_str(),cmd.str().length());*/
+	//cmd << "]." << MotorID << CRLF;
+	//m_pPort->Write(cmd.str().c_str(),cmd.str().length());
 
 	//tell the motor the current position is 0
 	//all moves are relative from here
 	cmd << "|2." << MotorID << CRLF;
-	logfile << cmd.str() <<endl;
-	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
-
+	
 	//set speed and acceleration
 	cmd << "A=" << acceleration << "." << MotorID << CRLF;
-	logfile << cmd.str() <<endl;
-	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
-	cmd << "S=" << speed << "." << MotorID << CRLF;
-	logfile << cmd.str() <<endl;
-	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
-
+	
+	cmd << "S=" << runspeed << "." << MotorID << CRLF;
+	
 	//set target position
 	cmd << "P=" << direction*length << "." <<MotorID << CRLF;
-	logfile << cmd.str() <<endl;
-	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
-
+	
 	//go
 	cmd << "^." << MotorID << CRLF;
-	logfile << cmd.str() <<endl;
+	
+	//send commnds to motor
 	m_pPort->Write(cmd.str().c_str(),cmd.str().length());
+	
+	//log comands to file
+	logfile << cmd.str() <<endl;
 	}
 
 

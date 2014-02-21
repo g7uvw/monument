@@ -47,7 +47,7 @@ const char *setupchoices[] = {
 	if (Sink->Locked){mvprintw(LINES - 3, 0, "Motor 2 is: Locked");}
 	else
 		mvprintw(LINES - 3, 0, "Motor 2 is: Free");
-	mvprintw(LINES -2,0,"Source Diameter %f mm, Takeup Diameter %f mm, Speed %f mm/s",GetsupplyD(),GettakeupD(),GettakeupS());
+	mvprintw(LINES -2,0,"Source Diameter %.3f mm, Takeup Diameter %.3f mm, Speed %.3f mm/s",GetsupplyD(),GettakeupD(),GettakeupSmms());
 	if (GetDirection() <0)
 		mvprintw(LINES -1,0,"Direction is Supply spool to Takeup spool\n");
 	else
@@ -110,9 +110,9 @@ refresh();
 		refresh();
 		cin >>  entry;
 		SetsupplyD(entry);
-		printw("%f\n",GetsupplyD());
+		printw("%.3f\n",GetsupplyD());
 		refresh();
-		printw("Supply spool diameter is now: %f mm\n",GetsupplyD());
+		printw("Supply spool diameter is now: %.3f mm\n",GetsupplyD());
 		printw("Press Enter to return to main menu.\n");
 		refresh();
 		getch();
@@ -126,9 +126,9 @@ refresh();
 		refresh();
 		cin >> entry;
 		SettakeupD(entry);
-		printw("%f\n",GettakeupD());
+		printw("%.3f\n",GettakeupD());
 		refresh();
-		printw("Take-up spool diameter is now: %f mm\n",GettakeupD());
+		printw("Take-up spool diameter is now: %.3f mm\n",GettakeupD());
 		printw("Press Enter to return to main menu.\n");
 		refresh(); 
 		getch();
@@ -143,13 +143,13 @@ refresh();
 		cin >> temp;
 		entry = (temp/GetsupplyC()) * (GetPPR()*GetSpeedUnit());
 		SetsupplyS(entry);
-		printw("%f\n",GetsupplyS());
+		printw("%.3f\n",GetsupplySmms());
 		refresh();
 		SettakeupS(GetsupplyS()*(GetsupplyD()/GettakeupD()));
 		Source->SetSpeed(GetsupplyS());
 		Sink->SetSpeed(GettakeupS());
-		printw("Take-up spool speed is now %f \n",GettakeupS());
-		printw("Supply spool speed is now %f \n",GetsupplyS());
+		printw("Take-up spool speed is now %.3f \n",GettakeupSmms());
+		printw("Supply spool speed is now %.3f \n",GetsupplySmms());
 		printw("Press Enter to return to main menu.\n");
 		refresh();
 		getch();
@@ -170,7 +170,7 @@ refresh();
 			SetDirection(-1);	//same for this, it really is -ve for a +direction the wave we have the hardware setup
 		
 		SettransferLength(abs(entry));
-		printw("%f\n",GettransferLength());
+		printw("%.3f\n",GettransferLength());
 		refresh();
 		printw("Press Enter to return to main menu.\n");
 		refresh();
