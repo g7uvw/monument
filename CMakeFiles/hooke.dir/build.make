@@ -35,13 +35,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dm/projects/hooke
+CMAKE_SOURCE_DIR = /home/dm/scratch/hooke
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dm/projects/hooke
+CMAKE_BINARY_DIR = /home/dm/scratch/hooke
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hooke.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/hooke.dir/flags.make
 
 CMakeFiles/hooke.dir/serialib.cpp.o: CMakeFiles/hooke.dir/flags.make
 CMakeFiles/hooke.dir/serialib.cpp.o: serialib.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/projects/hooke/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/scratch/hooke/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hooke.dir/serialib.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/serialib.cpp.o -c /home/dm/projects/hooke/serialib.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/serialib.cpp.o -c /home/dm/scratch/hooke/serialib.cpp
 
 CMakeFiles/hooke.dir/serialib.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hooke.dir/serialib.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/projects/hooke/serialib.cpp > CMakeFiles/hooke.dir/serialib.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/scratch/hooke/serialib.cpp > CMakeFiles/hooke.dir/serialib.cpp.i
 
 CMakeFiles/hooke.dir/serialib.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hooke.dir/serialib.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/projects/hooke/serialib.cpp -o CMakeFiles/hooke.dir/serialib.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/scratch/hooke/serialib.cpp -o CMakeFiles/hooke.dir/serialib.cpp.s
 
 CMakeFiles/hooke.dir/serialib.cpp.o.requires:
 .PHONY : CMakeFiles/hooke.dir/serialib.cpp.o.requires
@@ -77,17 +77,17 @@ CMakeFiles/hooke.dir/serialib.cpp.o.provides.build: CMakeFiles/hooke.dir/seriali
 
 CMakeFiles/hooke.dir/vars.cpp.o: CMakeFiles/hooke.dir/flags.make
 CMakeFiles/hooke.dir/vars.cpp.o: vars.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/projects/hooke/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/scratch/hooke/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hooke.dir/vars.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/vars.cpp.o -c /home/dm/projects/hooke/vars.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/vars.cpp.o -c /home/dm/scratch/hooke/vars.cpp
 
 CMakeFiles/hooke.dir/vars.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hooke.dir/vars.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/projects/hooke/vars.cpp > CMakeFiles/hooke.dir/vars.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/scratch/hooke/vars.cpp > CMakeFiles/hooke.dir/vars.cpp.i
 
 CMakeFiles/hooke.dir/vars.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hooke.dir/vars.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/projects/hooke/vars.cpp -o CMakeFiles/hooke.dir/vars.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/scratch/hooke/vars.cpp -o CMakeFiles/hooke.dir/vars.cpp.s
 
 CMakeFiles/hooke.dir/vars.cpp.o.requires:
 .PHONY : CMakeFiles/hooke.dir/vars.cpp.o.requires
@@ -100,17 +100,17 @@ CMakeFiles/hooke.dir/vars.cpp.o.provides.build: CMakeFiles/hooke.dir/vars.cpp.o
 
 CMakeFiles/hooke.dir/setup.cpp.o: CMakeFiles/hooke.dir/flags.make
 CMakeFiles/hooke.dir/setup.cpp.o: setup.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/projects/hooke/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/scratch/hooke/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hooke.dir/setup.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/setup.cpp.o -c /home/dm/projects/hooke/setup.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/setup.cpp.o -c /home/dm/scratch/hooke/setup.cpp
 
 CMakeFiles/hooke.dir/setup.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hooke.dir/setup.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/projects/hooke/setup.cpp > CMakeFiles/hooke.dir/setup.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/scratch/hooke/setup.cpp > CMakeFiles/hooke.dir/setup.cpp.i
 
 CMakeFiles/hooke.dir/setup.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hooke.dir/setup.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/projects/hooke/setup.cpp -o CMakeFiles/hooke.dir/setup.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/scratch/hooke/setup.cpp -o CMakeFiles/hooke.dir/setup.cpp.s
 
 CMakeFiles/hooke.dir/setup.cpp.o.requires:
 .PHONY : CMakeFiles/hooke.dir/setup.cpp.o.requires
@@ -123,17 +123,17 @@ CMakeFiles/hooke.dir/setup.cpp.o.provides.build: CMakeFiles/hooke.dir/setup.cpp.
 
 CMakeFiles/hooke.dir/jog.cpp.o: CMakeFiles/hooke.dir/flags.make
 CMakeFiles/hooke.dir/jog.cpp.o: jog.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/projects/hooke/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/scratch/hooke/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hooke.dir/jog.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/jog.cpp.o -c /home/dm/projects/hooke/jog.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/jog.cpp.o -c /home/dm/scratch/hooke/jog.cpp
 
 CMakeFiles/hooke.dir/jog.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hooke.dir/jog.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/projects/hooke/jog.cpp > CMakeFiles/hooke.dir/jog.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/scratch/hooke/jog.cpp > CMakeFiles/hooke.dir/jog.cpp.i
 
 CMakeFiles/hooke.dir/jog.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hooke.dir/jog.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/projects/hooke/jog.cpp -o CMakeFiles/hooke.dir/jog.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/scratch/hooke/jog.cpp -o CMakeFiles/hooke.dir/jog.cpp.s
 
 CMakeFiles/hooke.dir/jog.cpp.o.requires:
 .PHONY : CMakeFiles/hooke.dir/jog.cpp.o.requires
@@ -146,17 +146,17 @@ CMakeFiles/hooke.dir/jog.cpp.o.provides.build: CMakeFiles/hooke.dir/jog.cpp.o
 
 CMakeFiles/hooke.dir/motor.cpp.o: CMakeFiles/hooke.dir/flags.make
 CMakeFiles/hooke.dir/motor.cpp.o: motor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/projects/hooke/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/scratch/hooke/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hooke.dir/motor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/motor.cpp.o -c /home/dm/projects/hooke/motor.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/motor.cpp.o -c /home/dm/scratch/hooke/motor.cpp
 
 CMakeFiles/hooke.dir/motor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hooke.dir/motor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/projects/hooke/motor.cpp > CMakeFiles/hooke.dir/motor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/scratch/hooke/motor.cpp > CMakeFiles/hooke.dir/motor.cpp.i
 
 CMakeFiles/hooke.dir/motor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hooke.dir/motor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/projects/hooke/motor.cpp -o CMakeFiles/hooke.dir/motor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/scratch/hooke/motor.cpp -o CMakeFiles/hooke.dir/motor.cpp.s
 
 CMakeFiles/hooke.dir/motor.cpp.o.requires:
 .PHONY : CMakeFiles/hooke.dir/motor.cpp.o.requires
@@ -169,17 +169,17 @@ CMakeFiles/hooke.dir/motor.cpp.o.provides.build: CMakeFiles/hooke.dir/motor.cpp.
 
 CMakeFiles/hooke.dir/main.cpp.o: CMakeFiles/hooke.dir/flags.make
 CMakeFiles/hooke.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/projects/hooke/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dm/scratch/hooke/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hooke.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/main.cpp.o -c /home/dm/projects/hooke/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hooke.dir/main.cpp.o -c /home/dm/scratch/hooke/main.cpp
 
 CMakeFiles/hooke.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hooke.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/projects/hooke/main.cpp > CMakeFiles/hooke.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dm/scratch/hooke/main.cpp > CMakeFiles/hooke.dir/main.cpp.i
 
 CMakeFiles/hooke.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hooke.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/projects/hooke/main.cpp -o CMakeFiles/hooke.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dm/scratch/hooke/main.cpp -o CMakeFiles/hooke.dir/main.cpp.s
 
 CMakeFiles/hooke.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/hooke.dir/main.cpp.o.requires
@@ -230,6 +230,6 @@ CMakeFiles/hooke.dir/clean:
 .PHONY : CMakeFiles/hooke.dir/clean
 
 CMakeFiles/hooke.dir/depend:
-	cd /home/dm/projects/hooke && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dm/projects/hooke /home/dm/projects/hooke /home/dm/projects/hooke /home/dm/projects/hooke /home/dm/projects/hooke/CMakeFiles/hooke.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dm/scratch/hooke && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dm/scratch/hooke /home/dm/scratch/hooke /home/dm/scratch/hooke /home/dm/scratch/hooke /home/dm/scratch/hooke/CMakeFiles/hooke.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hooke.dir/depend
 

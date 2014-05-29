@@ -1,1 +1,1 @@
-/home/dm/projects/hooke/CMakeFiles/hooke.dir
+/home/dm/scratch/hooke/CMakeFiles/hooke.dir

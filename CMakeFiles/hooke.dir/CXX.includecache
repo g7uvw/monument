@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/dm/projects/hooke/motor.cpp
+/home/dm/scratch/hooke/hooke.h
+menu.h
+-
+stdlib.h
+-
+iostream
+-
 motor.h
-/home/dm/projects/hooke/motor.h
-sstream
--
-string.h
--
-cmath
--
+/home/dm/scratch/hooke/motor.h
 
-/home/dm/projects/hooke/motor.h
+/home/dm/scratch/hooke/motor.h
 serialib.h
-/home/dm/projects/hooke/serialib.h
+/home/dm/scratch/hooke/serialib.h
 string
 -
 iostream
@@ -26,7 +26,7 @@ iostream
 fstream
 -
 
-/home/dm/projects/hooke/serialib.h
+/home/dm/scratch/hooke/serialib.h
 sys/time.h
 -
 windows.h
@@ -49,4 +49,8 @@ unistd.h
 -
 sys/ioctl.h
 -
+
+/home/dm/scratch/hooke/vars.cpp
+hooke.h
+/home/dm/scratch/hooke/hooke.h
 
